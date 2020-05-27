@@ -23,7 +23,7 @@
             <div>
                 {{#each burgers}}
                 {{#if devour}}
-                <div>{{name}}</div>
+                <div>{{name}} <button class="trashButton" data-id="{{id}}">Toss It!</button></div>
                 <br>
                 {{/if}}
                 {{/each}}

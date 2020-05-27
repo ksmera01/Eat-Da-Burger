@@ -21,6 +21,27 @@ $(function () {
             }
         );
     });
+
+    $(".devourButton").on("click", function (event) {
+        event.preventDefault();
+        var id = $(this).data("id");
+        var isDevoured = $(this).data("devoured");
+
+        var changeToDevoured = {
+            devour: true
+        };
+
+        // Send the PUT request.
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT",
+            data: changeToDevoured
+        }).then(
+            function () {
+                // Reload the page to get the updated list
+                location.reload();
+            }
+        );
+    });
 })
 
 
