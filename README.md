@@ -4,7 +4,7 @@
 
   Welcome to Eat Da Burger! This newly designed restaurant app makes it simple to order new burgers on our menu. Once you add a burger to your queue, you can save it for later or devour it! This burger logger was created using MySQL, Node, Express, Handlebars and a homemade ORM. Please enjoy the new ordering functionality and we hope you visit again!
 
-  ![image description](./images/burgerplaceholder.jpg)
+  ![image description](./images/eatdaburger.png)
 
   ## Table of Contents
   
