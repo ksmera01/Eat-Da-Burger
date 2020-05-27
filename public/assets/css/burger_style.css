@@ -14,7 +14,7 @@ header {
 }
 
 body {
-    background-image: url("blur-restaurant-3.png");
+    background-image: url("/assets/img/blur-restaurant-3.png");
     height: 100%;
     display: flex;
     min-height: 100vh;

@@ -8,13 +8,17 @@
     <br>
     <div class="row">
         <div class="col-sm">
-            Burgers to Eat:
+            <h1>Burgers to Eat:</h1>
+            <div>
+                {{#each burgers}}
+                {{#unless devour}}
+                <div>{{name}}</div>
+                {{/unless}}
+                {{/each}}
+            </div>
         </div>
         <div class="col-sm">
-
-        </div>
-        <div class="col-sm">
-            Burgers Eaten:
+            <h1>Burgers Eaten:</h1>
         </div>
     </div>
 </section>
@@ -24,8 +28,8 @@
         <h2><span class="text-center orderBorder">Order Here</span></h2>
         <br>
         <div class="form-group">
-            <label for="ca">Enter Burger Name:</label>
-            <input type="text" id="ca" name="name">
+            <label for="createBurger">Enter Burger Name:</label>
+            <input type="text" id="newBurger" name="newBurgerName">
         </div>
         <button type="submit">Place Order</button>
     </form>
