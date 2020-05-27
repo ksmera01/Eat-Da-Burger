@@ -1,0 +1,49 @@
+header {
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-family: 'Barrio', cursive;
+}
+
+.burgerimg {
+    text-align: center;
+    width: 250px;
+    height: 250px;
+    border: 2px solid rgb(242, 140, 140);
+    padding: 20px;
+}
+
+body {
+    background-image: url("blur-restaurant-3.png");
+    height: 100%;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-attachment: fixed;
+    background-position: center bottom 1%;
+    background-size: 100%;
+  }
+
+.col-sm {
+    color: whitesmoke;
+    font-size: 30px;
+    border: 2px solid white;
+    background-color: rgb(242, 140, 140);
+}
+
+.ordermenu {
+    color: white;
+}
+
+.orderBorder {
+    border: 2px solid white;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(242, 140, 140);
+}
+
+.form-group {
+    font-size: 20px;
+}
