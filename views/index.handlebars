@@ -12,25 +12,32 @@
             <div>
                 {{#each burgers}}
                 {{#unless devour}}
-                <div>{{name}}</div>
+                <div>{{name}} <button class="devourButton" data-id="{{id}}">Devour It!</button></div>
+                <br>
                 {{/unless}}
                 {{/each}}
             </div>
         </div>
         <div class="col-sm">
             <h1>Burgers Eaten:</h1>
+            <div>
+                {{#each burgers}}
+                {{#if devour}}
+                <div>{{name}}</div>
+                <br>
+                {{/if}}
+                {{/each}}
+            </div>
         </div>
     </div>
 </section>
 <br>
-<section class="ordermenu">
-    <form class="create-form text-center">
-        <h2><span class="text-center orderBorder">Order Here</span></h2>
-        <br>
-        <div class="form-group">
-            <label for="createBurger">Enter Burger Name:</label>
-            <input type="text" id="newBurger" name="newBurgerName">
-        </div>
-        <button type="submit">Place Order</button>
-    </form>
-</section>
+<form class="create-form text-center">
+    <h2><span class="text-center orderBorder">Order Here:</span></h2>
+    <br>
+    <div id="orderHere" class="form-group">
+        <label for="createBurger">Enter Burger Name:</label>
+        <input type="text" id="newBurger" name="newBurgerName">
+    </div>
+    <button id="submitOrder" type="submit">Place Order</button>
+</form>

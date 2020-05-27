@@ -1,17 +1,43 @@
+//Add new burger on submit
 $(function () {
-    $(".eat-burger").on("click", function (event) {
-        var id = $(this).data("id");
+    $(".create-form").on("submit", function (event) {
+        // Make sure to preventDefault on a submit event.
+        event.preventDefault();
+        console.log("this was submitted")
 
-        // Send the PUT request.
-        $.ajax("/api/burgers/" + id, {
-            type: "PUT",
-            data: newBurgerState
+        var addBurger = {
+            name: $("#newBurger").val().trim()
+        };
+
+        // Send the POST request.
+        $.ajax("api/burgers", {
+            type: "POST",
+            data: addBurger
         }).then(
             function () {
-                console.log("Burger was demolished");
+                console.log("made new burger");
                 // Reload the page to get the updated list
                 location.reload();
             }
         );
     });
-});
+})
+
+
+// $(function () {
+//     $("devourButton").on("click", function (event) {
+//         var id = $(this).data("id");
+
+//         // Send the PUT request.
+//         $.ajax("/api/burgers/" + id, {
+//             type: "PUT",
+//             data: newBurgerState
+//         }).then(
+//             function () {
+//                 console.log("Burger was demolished");
+//                 // Reload the page to get the updated list
+//                 location.reload();
+//             }
+//         );
+//     });
+// });
